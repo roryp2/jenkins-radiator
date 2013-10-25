@@ -99,7 +99,10 @@ JR.Radiator = Backbone.Model.extend({
             LOG.trace("Executing isJobIncluded method on job " + job);
         }
         var excludeFilter = this.getExcludeFilter();
-        var jobExcludedByExcludeFilter = _.include(excludeFilter, job.getName());
+        //var jobExcludedByExcludeFilter = _.include(excludeFilter, job.getName());
+        var jobExcludedByExcludeFilter =_.reduce(excludeFilter, function(result, regex){
+	       return result || job.getName().match(regex);
+        }, false);
         var includeFilter = this.getIncludeFilter();
         var includedJobsDefined = includeFilter.length>0;
         //var jobIncludedByIncludeFilter = _.include(includeFilter, job.getName());
