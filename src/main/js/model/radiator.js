@@ -102,7 +102,12 @@ JR.Radiator = Backbone.Model.extend({
         var jobExcludedByExcludeFilter = _.include(excludeFilter, job.getName());
         var includeFilter = this.getIncludeFilter();
         var includedJobsDefined = includeFilter.length>0;
-        var jobIncludedByIncludeFilter = _.include(includeFilter, job.getName());
+        //var jobIncludedByIncludeFilter = _.include(includeFilter, job.getName());
+        var jobIncludedByIncludeFilter =_.reduce(includeFilter, function(result, regex){
+	       return result || job.getName().match(regex);
+        }, false);
+
+
         var isIncluded = !jobExcludedByExcludeFilter && (!includedJobsDefined || jobIncludedByIncludeFilter);
         if(LOG.isTraceEnabled()){
             LOG.trace("Is job " + job.getName() + " included in radiator? excludeFilter=, " + excludeFilter + ", includeFilter=" + includeFilter + ", jobExcludedByExcludeFilter=" + jobExcludedByExcludeFilter + ", includedJobsDefined=" + includedJobsDefined + ", jobIncludedByIncludeFilter=" + jobIncludedByIncludeFilter + ", isIncluded=" + isIncluded);
