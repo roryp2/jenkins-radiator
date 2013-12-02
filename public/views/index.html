@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Jenkins Radiator</title>
+
+    <!--Dependencies-->
+    <script src="js/lib/jquery/jquery-min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/lib/jquery-jsonp/jquery.jsonp-min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/lib/underscore/underscore-min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/lib/backbone/backbone-min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/lib/backbone-relational/backbone-relational.js"></script>
+    <script src="js/lib/mustache/mustache.js" type="text/javascript" charset="utf-8"></script>
+
+    <!--Config-->
+    <script src="js/config.js" type="text/javascript" charset="utf-8"></script>
+
+    <!--Namespace-->
+    <script src="js/namespace.js" type="text/javascript" charset="utf-8"></script>
+
+    <!--Models-->
+    <script src="js/model/build.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/model/buildserver.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/model/job.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/model/radiator.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/model/failingjobs.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/model/buildmetrics.js" type="text/javascript" charset="utf-8"></script>
+
+    <!--Collections-->
+    <script src="js/collection/buildservers.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/collection/jobs.js" type="text/javascript" charset="utf-8"></script>
+
+    <!--Views-->
+    <script src="js/view/job.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/view/jobspassing.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/view/jobsfailing.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/view/radiator.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/view/radiatortitle.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/view/buildmetric.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/view/footer.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/view/buildmetricwrapper.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/view/help.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/view/loading.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/view/config.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/view/buildserver.js" type="text/javascript" charset="utf-8"></script>
+
+    <!--Router-->
+    <script src="js/router.js" type="text/javascript" charset="utf-8"></script>
+
+    <!--Bootstrap-->
+    <script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+
+    <link rel="stylesheet" href="css/lib/bootstrap/bootstrap.min.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/jenkins-radiator.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/lib/fontawesome/font-awesome.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<body>
+    <div class="container-fluid" id="title"></div>
+    <div class="container-fluid" id="container"></div>
+    <div class="container-fluid" id="footer"></div>
+
+    <!--<audio id="booing-audio">-->
+        <!--<source src="sfx/KidsBooing.ogg" type="audio/ogg">-->
+        <!--<source src="sfx/KidsBooing.mp3" type="audio/mpeg">-->
+        <!--<source src="sfx/KidsBooing.wav" type="audio/wav">-->
+    <!--</audio>-->
+    <!--<audio id="cheering-audio">-->
+        <!--<source src="sfx/KidsCheering.ogg" type="audio/ogg">-->
+        <!--<source src="sfx/KidsCheering.mp3" type="audio/mpeg">-->
+        <!--<source src="sfx/KidsCheering.wav" type="audio/wav">-->
+    <!--</audio>-->
+</body>
+</html>
