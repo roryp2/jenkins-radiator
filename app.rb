@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require 'net/http'
+require 'json'
 
 module JenkinsRadiator
 
@@ -17,7 +18,10 @@ module JenkinsRadiator
       uri = URI(URI::encode(params['server']))
 
       content_type 'application/javascript'
-      "#{callback}(#{Net::HTTP.get(uri)});"
+      response.headers['Connection'] = 'Keep-Alive'
+      response.headers['Keep-Alive'] = 'timeout=5, max=88'
+
+      "#{callback}(#{JSON.parse(Net::HTTP.get(uri)).to_json})"
     end
   end
 end

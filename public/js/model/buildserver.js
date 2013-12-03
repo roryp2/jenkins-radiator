@@ -7,12 +7,12 @@ JR.BuildServer = Backbone.RelationalModel.extend({
     },
 
     sync: function (method, model, options) {
-        return $.ajax({
+        return $.ajax(_.extend({
             type: 'GET',
             dataType: 'jsonp',
             processData: true,
             url: '/jenkins?jsonp=?&server=' + this.url()
-        });
+        }, options));
     },
 
     relations: [
