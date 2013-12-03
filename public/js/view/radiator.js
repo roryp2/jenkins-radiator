@@ -67,12 +67,12 @@ JR.RadiatorView = Backbone.View.extend({
     },
 
     renderAudio: function () {
-        if (this.model.buildsAreFailing() && this.lastSoundPlayed != "boo") {
-            this.lastSoundPlayed = "boo";
-            $("audio#booing-audio")[0].play();
-        } else if (this.model.buildsArePassing() && this.lastSoundPlayed != "cheer") {
-            this.lastSoundPlayed = "cheer";
-            $("audio#cheering-audio")[0].play();
-        }
+//        if (this.model.buildsAreFailing() && this.lastSoundPlayed != "boo") {
+//            this.lastSoundPlayed = "boo";
+//            $("audio#booing-audio")[0].play();
+//        } else if (this.model.buildsArePassing() && this.lastSoundPlayed != "cheer") {
+//            this.lastSoundPlayed = "cheer";
+//            $("audio#cheering-audio")[0].play();
+//        }
     }
 });
