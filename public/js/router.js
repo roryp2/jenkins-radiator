@@ -96,13 +96,13 @@ JR.AppRouter = Backbone.Router.extend({
 
     selectConfig: function (configIdx) {
         var idx = parseInt(configIdx, 10);
-        if (idx) {
-            if (idx >= configs.length) {
-                idx = 0;
-            } else if (idx < 0) {
-                idx = 0;
-            }
-            config = configs[idx];
+        if (!idx) { idx = 0; }
+
+        if (idx >= configs.length) {
+            idx = 0;
+        } else if (idx < 0) {
+            idx = 0;
         }
+        config = configs[idx];
     }
 });

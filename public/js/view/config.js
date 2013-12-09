@@ -16,14 +16,14 @@ JR.ConfigView = Backbone.View.extend({
                 "</table>" +
                 "</div>" +
                 "<div class='urls'>" +
-                "<p><a href='#builds/{{idx}}'>List all builds from server</a></p>" +
                 "<p><a href='#radiator/{{idx}}'>Show radiator</a></p>" +
                 "</div>" +
                 "</div>",
             json = this.options.config,
-            output = Mustache.to_html(template, json);
+            output;
 
         json.idx = this.options.configIdx;
+        output = Mustache.to_html(template, json);
 
         $(this.el).html(output);
         return this;
